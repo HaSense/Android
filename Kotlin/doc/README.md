@@ -30,3 +30,8 @@ H1 ~ H6까지 작성하는 방법
 **bold**
 ***bold and italic***
 ```
+
+*italic*
+**bold**
+***bold and italic***
+
