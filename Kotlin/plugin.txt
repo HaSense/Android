@@ -1,0 +1,9 @@
+
+Gradle Scripts
+build.gradle
+
+Plugins{
+Id ‘com.android.application’
+Id ‘kotlin-android’
+Id ‘kotlin-android-extensions’
+}
