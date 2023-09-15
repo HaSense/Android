@@ -16,15 +16,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final String[] fruits = new String[] { "사과", "딸기", "배"};
+        final boolean[] checkArr = new boolean[] {true, false, false};
         Button btnDialogOpen = findViewById(R.id.btnDialogOpen);
         btnDialogOpen.setOnClickListener(view -> {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
             dlg.setTitle("제목입니다.");
-            //dlg.setMessage("이곳이 내용입니다."); //메시지가 활성화 되면 dlg.setItems는 가려집니다.
+//            dlg.setMessage("이곳이 내용입니다."); //메시지가 활성화 되면 dlg.setItems는 가려집니다.
             dlg.setIcon(R.mipmap.ic_launcher);
-            dlg.setItems(fruits, new DialogInterface.OnClickListener() {
+//            dlg.setItems(fruits, new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialogInterface, int i) {
+//                    btnDialogOpen.setText(fruits[i]);
+//                }
+//            });
+//            dlg.setSingleChoiceItems(fruits, 0, new DialogInterface.OnClickListener() {
+//
+//                @Override
+//                public void onClick(DialogInterface dialogInterface, int i) {
+//                    btnDialogOpen.setText(fruits[i]);
+//                }
+//            });
+            dlg.setMultiChoiceItems(fruits, checkArr, new DialogInterface.OnMultiChoiceClickListener() {
                 @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+                public void onClick(DialogInterface dialogInterface, int i, boolean b) {
                     btnDialogOpen.setText(fruits[i]);
                 }
             });
