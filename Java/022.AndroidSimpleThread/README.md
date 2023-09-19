@@ -20,3 +20,7 @@
 | int arg2 | 추가정보 2 |
 | Object obj | 임의의 객체로 추가정보 제공 |
 | Messenger replyTo | 메시지에 대한 응답을 받은 객체를 지정|
+
+© boolean Handler.sendEmptyMessage(int what)
+© boolean Handler.sendMessage(Message msg)
+© boolean sendMessageAtFrontOfQueue(Message msg)
