@@ -12,3 +12,5 @@
 
 ![image](https://github.com/HaSense/Android/assets/23206779/6f7feaff-70f7-4c44-8d32-e4782f311e9c)
 
+![image](https://github.com/HaSense/Android/assets/23206779/5066b55f-83a4-4946-8651-cff2821f8dfb)
+
