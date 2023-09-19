@@ -22,4 +22,3 @@ void quit()
 **Prepare**는 현재 스레드를 위한 루퍼를 준비함
 
 **loop**  메서드는 큐에서 메시지를 꺼내 핸들러로 전달하는 loop를 실행하고, 루프는 quit 메서드가 호출되어 루프를 종료할 때까지 무한 반복됨
-![image](https://github.com/HaSense/Android/assets/23206779/1b77cee6-5c6e-4a46-a8b6-d7f075632b12)
