@@ -5,7 +5,7 @@
 
 ### ViewPager와 ViewPager2 비교
 
-| Feature/Component   | ViewPager                                   | ViewPager2                                                                 |
+| 특 성   | ViewPager                                   | ViewPager2                                                                 |
 |---------------------|---------------------------------------------|----------------------------------------------------------------------------|
 | **기본 구조**           | `PagerAdapter` 사용                          | `RecyclerView.Adapter` 사용 (RecyclerView의 모든 기능 상속)                 |
 | **방향 지원**          | 주로 수평 스크롤 지원                          | 수평 및 수직 스크롤 지원                                                      |
