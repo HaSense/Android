@@ -49,7 +49,7 @@ jetpack과 완성된 코드를 활용해 프로젝트를 구현하는 방법을 
 
     - 그래들이 업그레이드 되면서 하위 호환성을 가진 jetpack 라이브러리들은 문제가 발생합니다.
     - 그래서 현재 모듈은 사용을 안하면 좋겠지만 연동하고 싶다면 하위호환성을 추가해 줘야 합니다.
-    - gradle.properties에 android.enableJetifier = true 옵션을 추가합니다.
+    - gradle.properties 파일에서 android.enableJetifier = true 옵션을 추가합니다.
     ```
     org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
     android.useAndroidX=true
