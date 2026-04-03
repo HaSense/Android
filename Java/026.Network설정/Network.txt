@@ -26,3 +26,15 @@ WSL과 Windows 그리고 Android 네트워크 설정
 
    $> nc -zv $(ip route | grep default | awk '{print $3}') 9999
    $> nc -zv http://172.25.240.1:9999
+
+3. 포트포워딩
+   윈도우에서 가능 powershell에서 명령어
+
+   -현재 포트포워딩 목록 확인
+   > netsh interface portproxy show all
+   
+   -포트 포워딩 설정 명령어
+   > netsh interface portproxy add v4tov4 listenport=8000 listenaddress=0.0.0.0 connectport=8000 connectaddress=172.25.240.204
+
+   -포트 포워딩 해제 명령어
+   > netsh interface portproxy delete v4tov4 listenport=8000 listenaddress=0.0.0.0
