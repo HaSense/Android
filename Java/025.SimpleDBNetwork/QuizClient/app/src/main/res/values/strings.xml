@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">QuizClient</string>
+    <string name="description">FastAPI 서버에서 내려오는 퀴즈를 풀어보세요.</string>
+    <string name="hint_username">닉네임 또는 이름</string>
+    <string name="action_load_question">문제 불러오기</string>
+    <string name="action_submit">정답 제출</string>
+    <string name="message_no_question">먼저 문제를 불러오세요.</string>
+    <string name="message_select_answer">정답을 선택하세요.</string>
+    <string name="message_missing_username">닉네임을 입력하세요.</string>
+    <string name="result_placeholder">결과가 여기에 표시됩니다.</string>
+    <string name="base_url">http://10.0.2.2:8000</string>
+    <string name="result_correct">%1$s: 정답입니다!</string>
+    <string name="result_wrong">오답입니다. 정답은 %1$s 입니다.</string>
+    <string name="error_template">오류: %1$s</string>
 </resources>

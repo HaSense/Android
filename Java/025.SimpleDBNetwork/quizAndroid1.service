@@ -1,0 +1,18 @@
+[Unit]
+Description=FastAPI backend for the Android Quiz client
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/mnt/c/Users/shhawork/Documents/GitHub/Android/Java/025.SimpleDBNetwork/FastAPIServer
+Environment="PATH=/home/ubuntu/miniconda3/envs/fast/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+ExecStart=/home/ubuntu/miniconda3/envs/fast/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/log/quizAndroid1.log
+StandardError=append:/var/log/quizAndroid1.log
+
+[Install]
+WantedBy=multi-user.target

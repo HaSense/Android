@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>퀴즈 서버 대시보드</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Android 퀴즈 서버 현황</h1>
+        <p>FastAPI 서버 상태, 등록된 문제, 최근 제출을 한눈에 확인하세요.</p>
+    </header>
+
+    <section class="stats">
+        <div class="card">
+            <span class="label">문제 수</span>
+            <strong>{{ payload.stats.questions }}</strong>
+        </div>
+        <div class="card">
+            <span class="label">제출 수</span>
+            <strong>{{ payload.stats.submissions }}</strong>
+        </div>
+        <div class="card">
+            <span class="label">정답 수</span>
+            <strong>{{ payload.stats.correct_submissions }}</strong>
+        </div>
+    </section>
+
+    <section>
+        <h2>등록된 문제</h2>
+        <div class="question-grid">
+            {% for question in payload.questions %}
+            <article>
+                <h3>#{{ question.id }} {{ question.text }}</h3>
+                <ul>
+                    <li>A. {{ question.option_a }}</li>
+                    <li>B. {{ question.option_b }}</li>
+                    <li>C. {{ question.option_c }}</li>
+                    <li>D. {{ question.option_d }}</li>
+                </ul>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section>
+        <h2>최근 제출 기록</h2>
+        {% if payload.submissions %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>사용자</th>
+                        <th>문제</th>
+                        <th>제출 답안</th>
+                        <th>결과</th>
+                        <th>제출 시각</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for submission in payload.submissions %}
+                    <tr>
+                        <td>{{ submission.username }}</td>
+                        <td>#{{ submission.question_id }}</td>
+                        <td>{{ submission.answer }}</td>
+                        <td>
+                            {% if submission.correct %}
+                                <span class="badge success">정답</span>
+                            {% else %}
+                                <span class="badge danger">오답</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ submission.submitted_at }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="empty">아직 제출이 없습니다.</p>
+        {% endif %}
+    </section>
+</body>
+</html>
