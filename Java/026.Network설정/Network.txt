@@ -26,16 +26,3 @@ WSL과 Windows 그리고 Android 네트워크 설정
 
    $> nc -zv $(ip route | grep default | awk '{print $3}') 9999
    $> nc -zv http://172.25.240.1:9999
-
-   이유 NAT 환경일 경우 Default Gateway가 윈도우 ip일 확률이 높다.
-
-   default Gateway도 안된다면 Windows쪽 방화벽 Inbound(인바운드) 특정 포트를 열어주어서 접근이 가능하다.
-
-3. Android IP
-   wsl, windows 모두 같은 네트워크, 같은 wifi에 물려 있으면 Android 장치와도 쉽게 통신되지만 그렇지 않으면
-   서로 통신이 안된다.
-
-   wsl, windows가 사설망이라 하더라도 android를 LTE로 사용하면 공인IP를 받게 되는데 그럼 wsl,windows --> android
-   는 접근가능하고 반대는 접근이 안된다.
-
-   
