@@ -1,7 +1,8 @@
 # 코틀린 프로그래밍 문법
 
 ### List
-```
+
+```kotlin
 // Read only list
 val readOnlyShapes = listOf("triangle", "square", "circle")
 println(readOnlyShapes)
@@ -11,4 +12,4 @@ println(readOnlyShapes)
 val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
 println(shapes)
 // [triangle, square, circle]
-```
+
