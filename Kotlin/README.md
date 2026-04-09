@@ -3,13 +3,13 @@
 ### List
 
 ```kotlin
-// Read only list
-val readOnlyShapes = listOf("triangle", "square", "circle")
+// 읽기전용
+val readOnlyShapes = listOf("사과", "수박", "딸기")
 println(readOnlyShapes)
-// [triangle, square, circle]
+// [사과, 수박, 딸기]
 
-// Mutable list with explicit type declaration
-val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+// 명시적 변경 타입 선언 목록
+val shapes: MutableList<String> = mutableListOf("사과", "수박", "딸기")
 println(shapes)
-// [triangle, square, circle]
+// [사과, 수박, 딸기]
 
