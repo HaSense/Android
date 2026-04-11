@@ -20,3 +20,5 @@ val shapes: MutableList<String> = mutableListOf("사과", "수박", "딸기")
 println(shapes)
 // [사과, 수박, 딸기]
 
+
+java는 클래스에 public을 붙이지 않으면 다른 패키지 일때 접근불가. 하지만 코틀린은 기본족으로 class 앞에 public을 붙이지 않아도 코틀린에서는 기본이 public이 붙어 있는 형태임.
