@@ -23,3 +23,29 @@ println(shapes)
 
 
 java는 클래스에 public을 붙이지 않으면 다른 패키지 일때 접근불가. 하지만 코틀린은 기본족으로 class 앞에 public을 붙이지 않아도 코틀린에서는 기본이 public이 붙어 있는 형태임.
+
+### 상속
+```kotlin
+abstract  class Shape {
+    abstract fun draw()
+}
+
+class Triangle : Shape() {
+    override fun draw() {
+        println("삼각형을을 그리다")
+    }
+
+}
+class Rectangle : Shape() {
+    override fun draw() {
+        println("사각형을 그리다")
+    }
+
+}
+class Circle : Shape() {
+    override fun draw() {
+        println("원을 그리다")
+    }
+
+}
+```
