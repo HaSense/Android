@@ -49,3 +49,29 @@ class Circle : Shape() {
 
 }
 ```
+
+#### 구구단
+```kotlin
+
+    fun main(){
+        print("출력할 단을 입력하세요. (2~9)")
+
+        val input = readLine()?.toIntOrNull()
+
+        //입력값 검증
+        if(input == null || input !in 2..9){
+            println("잘못된 입력입니다. 2~9 사이의 숫자를 입력하세요.")
+            return
+        }
+
+        for(i in 1..9){
+            println("$input x $i = ${input * i}")
+        }
+    }
+
+```
+
+
+
+
+
