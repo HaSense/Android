@@ -87,8 +87,46 @@ fun main() {
     println("평균: %.2f".format(avg))
 }
 ```
+### 4. 홀/짝수 판별
+- 
+```kotlin
+fun main() {
+    val num = readLine()!!.toInt()
 
+    if (num % 2 == 0) {
+        println("짝수")
+    } else {
+        println("홀수")
+    }
+}
+```
 
+### 5. 구구단
+- while
+```kotlin
+fun main() {
+    print("단 입력: ")
+    val n = readLine()!!.toInt()
+
+    var i = 1
+    while (i <= 9) {
+        println("$n x $i = ${n * i}")
+        i++
+    }
+}
+```
+
+- for
+```kotlin
+fun main() {
+    print("단 입력: ")
+    val n = readLine()!!.toInt()
+
+    for (i in 1..9) {
+        println("$n x $i = ${n * i}")
+    }
+}
+```
 
 
 
