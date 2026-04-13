@@ -130,8 +130,9 @@ fun main() {
 
 ### 6. Call by Reference 형태의 Swap(a,b) 함수 구현
 - java에서도 c/c++ 같은 swap함수가 구현이 되지 않는다.
+- Kotlin에서는 생성자 앞에 var 또는 val을 붙이면 자동으로 멤버로 승격됩니다.
 ```kotlin
-class IntRef(var value: Int)
+class IntRef(var value: Int) //value는 멤버가 됨
 
 fun swap(a: IntRef, b: IntRef) {
     val temp = a.value
