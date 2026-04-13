@@ -68,6 +68,25 @@ fun main() {
     println("평균: %.2f".format(avg))
 }
 ```
+- 안전입력형
+```kotlin
+fun main() {
+    val scores = IntArray(3)
+
+    val subjects = arrayOf("국어", "영어", "수학")
+
+    for (i in scores.indices) {
+        print("${subjects[i]} 점수 입력: ")
+        scores[i] = readLine()!!.toInt()
+    }
+
+    val total = scores.sum()
+    val avg = total / scores.size.toDouble()
+
+    println("총점: $total")
+    println("평균: %.2f".format(avg))
+}
+```
 
 
 
