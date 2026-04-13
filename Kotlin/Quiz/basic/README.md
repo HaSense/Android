@@ -34,3 +34,49 @@ fun main() {
     println(String.format("%.2f", fahrenheit))
 }
 ```
+
+### 3. 국어, 영어, 수학 성적의 총점과 평균 구하기
+- 일반형
+```kotlin
+fun main() {
+    print("국어 점수 입력: ")
+    val kor = readLine()!!.toInt()
+
+    print("영어 점수 입력: ")
+    val eng = readLine()!!.toInt()
+
+    print("수학 점수 입력: ")
+    val math = readLine()!!.toInt()
+
+    val totalScore = kor + eng + math
+    val avg = totalScore / 3.0
+
+    println("총점: $totalScore")
+    println("평균: %.2f".format(avg))
+}
+```
+- 배열형 (국어,영어,수학 순서로 들어온다고 가정)
+```kotlin
+fun main() {
+    // 입력: 공백으로 구분된 3개의 점수 (국어 영어 수학)
+    val scores = readLine()!!.split(" ").map { it.toInt() }.toIntArray()
+
+    val totalScore = scores.sum()
+    val avg = totalScore / scores.size.toDouble()
+
+    println("총점: $totalScore")
+    println("평균: %.2f".format(avg))
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
