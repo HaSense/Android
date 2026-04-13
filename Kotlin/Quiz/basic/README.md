@@ -150,7 +150,40 @@ fun main() {
 }
 ```
 
+### 7. 사칙연산 프로그램 
+- 단  Calculator 클래스를 만드세요.
+```Kotlin
+class Calculator {
 
+    fun add(a: Int, b: Int): Int = a + b
+
+    fun sub(a: Int, b: Int): Int = a - b
+
+    fun mul(a: Int, b: Int): Int = a * b
+
+    fun div(a: Int, b: Int): Double = a.toDouble() / b
+}
+
+fun main() {
+    print("첫 번째 정수 입력: ")
+    val a = readLine()!!.toInt()
+
+    print("두 번째 정수 입력: ")
+    val b = readLine()!!.toInt()
+
+    val calc = Calculator()
+
+    println("덧셈: ${calc.add(a, b)}")
+    println("뺄셈: ${calc.sub(a, b)}")
+    println("곱셈: ${calc.mul(a, b)}")
+
+    if (b != 0) {
+        println("나눗셈: %.2f".format(calc.div(a, b)))
+    } else {
+        println("나눗셈: 0으로 나눌 수 없습니다.")
+    }
+}
+```
 
 
 
