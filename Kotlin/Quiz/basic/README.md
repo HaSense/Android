@@ -128,6 +128,26 @@ fun main() {
 }
 ```
 
+### 6. Call by Reference 형태의 Swap(a,b) 함수 구현
+- java에서도 c/c++ 같은 swap함수가 구현이 되지 않는다.
+```kotlin
+class IntRef(var value: Int)
+
+fun swap(a: IntRef, b: IntRef) {
+    val temp = a.value
+    a.value = b.value
+    b.value = temp
+}
+
+fun main() {
+    val a = IntRef(readLine()!!.toInt())
+    val b = IntRef(readLine()!!.toInt())
+
+    swap(a, b)
+
+    println("a = ${a.value}, b = ${b.value}")
+}
+```
 
 
 
