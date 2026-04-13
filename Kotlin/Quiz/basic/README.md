@@ -185,6 +185,47 @@ fun main() {
 }
 ```
 
+### 상속
+
+```kotlin
+open class Hero {
+    open fun attack() {
+        println("공격!")
+    }
+}
+
+class Knight : Hero() {
+    override fun attack() {
+        println("Knight: 검으로 공격!")
+    }
+}
+
+class Archer : Hero() {
+    override fun attack() {
+        println("Archer: 활로 공격!")
+    }
+}
+
+class Wizard : Hero() {
+    override fun attack() {
+        println("Wizard: 마법으로 공격!")
+    }
+}
+
+fun main() {
+    // 부모 타입으로 자식 객체 참조 (다형성)
+    val heroes: Array<Hero> = arrayOf(
+        Knight(),
+        Archer(),
+        Wizard()
+    )
+
+    // 동일한 호출 → 서로 다른 결과
+    for (hero in heroes) {
+        hero.attack()
+    }
+}
+```
 
 
 
